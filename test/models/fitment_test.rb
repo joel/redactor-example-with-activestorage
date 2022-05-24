@@ -3,7 +3,7 @@
 require 'test_helper'
 
 class FitmentTest < ActiveSupport::TestCase
-  # test "the truth" do
-  #   assert true
-  # end
+  test "has an attachment" do
+    assert create(:fitment, :with_asset).asset.attached?
+  end
 end
